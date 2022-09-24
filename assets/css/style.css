@@ -1,0 +1,123 @@
+
+ * {
+    margin:0;
+    padding:0;  
+  }
+  
+  /* Element Selectors */
+  body {
+    position: relative;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-size: 20px;
+    background-color: #FDF8F5;
+    color: #4F4846;
+  }
+  
+  main {
+    padding: 60px 0;
+  }
+ header,
+footer {
+  height: 20px;
+  width: 100%;
+  line-height: 60px;
+  display: inline;
+  background-color: #1a1b1b;
+}
+h1{
+    width:300px;
+    text-align: center;
+    /* padding-inline: 10px; */
+    background-color: rgb(102, 146, 146);
+    padding: 0%;
+}
+h2{
+    Display: block;
+    text-align: left;
+    padding: 0%;
+}
+img{
+    padding: 0%;
+    display:flex;
+}
+nav{
+    background-color: #2b2c2d;
+}
+li {
+    display: inline;
+     padding: 0px 20px; 
+    text-decoration: none;
+     
+  }
+  
+  a {
+    /* text-decoration: none; */
+    color: rgb(102, 146, 146);
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    width:200px;
+    background-color: rgb(102, 146, 146);
+  }
+  
+.text-right{
+    text-align:right;
+    
+  }
+  /* Every Box */
+  .aboutme{
+    align-content: center;
+    padding: 5px; 
+    border-style: double;
+    height: 250px;
+    width:1300px;
+    justify-content: space-between;
+    border-width: 2px;
+    margin-top: -40px;
+    margin-left: 80px;
+    margin-bottom:10px;
+    flex: 0 0 10px;
+    /* border-radius: 40px; */
+    box-shadow: 5px 6px 3px #13293d;
+    background-image: linear-gradient( rgb(232, 224, 232), skyblue);
+    /* background-color: aqua; */
+  }
+  .Work{
+    align-content: center;
+    padding: 5px; 
+    border-style: double;
+    height: 250px;
+    width:1300px;
+    justify-content: space-between;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-bottom:10px;
+    flex: 0 0 10px;
+    /* border-radius: 40px; */
+    box-shadow: 5px 6px 3px #13293d;
+    background-image: linear-gradient( rgb(232, 224, 232), skyblue);
+  }
+  .ContactMe{
+    align-content: center;
+    padding: 5px; 
+    border-style: double;
+    height: 250px;
+    width:1300px;
+    justify-content: space-between;
+    border-width: 2px;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-bottom:10px;
+    flex: 0 0 10px;
+    /* border-radius: 40px; */
+    box-shadow: 5px 6px 3px #13293d;
+    background-image: linear-gradient( rgb(232, 224, 232), skyblue);
+  }
