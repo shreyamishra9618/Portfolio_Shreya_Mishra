@@ -224,6 +224,7 @@ header nav{
     }
     #Work{
         flex-direction: column;
+        height:860px;
         max-width: 600px;
         margin-top: -50px;
         margin-left: 10px;
@@ -255,7 +256,7 @@ header nav{
     #ContactMe{flex-direction: column;
         flex-direction: column;
         max-width: 600px;
-        margin-top: 200px;
+        margin-top: 0px;
         margin-left: 10px;
         white-space: normal;
 }
