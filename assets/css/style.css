@@ -31,7 +31,7 @@ h1{
     background-color: rgb(102, 146, 146);
     padding: 0%;
 }
-h2{
+h2{ flex-direction: row;
     Display: block;
     text-align: left;
     padding: 0%;
@@ -187,3 +187,77 @@ header nav{
     background-image: linear-gradient( rgb(232, 224, 232), skyblue);
   }
   #ContactMe:hover{box-shadow: 5px 6px 3px #13293d;}
+
+  @media screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    main {
+        max-width: 700px;
+      /* background-color: #2b2c2d; */
+      flex-direction: column;
+    }
+    h2{ 
+        flex-direction: column;
+        position:relative;
+        Display:inline-block;
+        text-align:center;
+        padding-bottom: 60px; 
+        max-width:400px ;
+          margin-left:230px;  
+          white-space: normal;
+         /* margin-bottom:-90px; */
+         margin-right: 0%;
+        /* border-right: #1a1b1b; */
+        text-decoration: underline; 
+    
+    }
+
+    #aboutme{
+        flex-direction: column;
+        max-width: 600px;
+        margin-top: -50px;
+        margin-left: 10px;
+        white-space: normal;
+
+    }
+    #Work{
+        flex-direction: column;
+        max-width: 600px;
+        margin-top: -50px;
+        margin-left: 10px;
+        white-space: normal;
+    }
+    #first{
+        flex-direction: column;
+        max-width: 600px;
+
+    }
+    #second{
+        flex-direction: column;
+        
+    }
+    #third{flex-direction: column;
+      position:relative;
+    background-color: rgb(189, 189, 43); 
+     top:150px;left:0px;  }
+    #fourth{flex-direction: column;
+        position: relative;
+       /* bottom:150px; */
+       top:160px;
+       background-color: orangered;}
+    #fifth{flex-direction: column;
+    background-color:coral;
+    left:0px;
+     position: relative;
+      top:170px;}
+    #ContactMe{flex-direction: column;
+        flex-direction: column;
+        max-width: 600px;
+        margin-top: 200px;
+        margin-left: 10px;
+        white-space: normal;
+}
+  }
+ 
