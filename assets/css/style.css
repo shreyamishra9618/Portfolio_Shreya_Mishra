@@ -4,23 +4,25 @@
     padding:0;  
   }
   :root {
-    /* COLORS */
-    --bg-color: #0b0221;
+    /* Color Scheme */
+    --bg-color: #110c23;
     --text-color:  rgb(102, 146, 146);;
-    --alt-color: #4F4846;
-    --accent-color: #110c23;
+    --alt-color: #6c3c2f;
+    --accent-color:#150441;
     --gradient: linear-gradient( rgb(140, 198, 248), rgb(48, 180, 195));
     --card-bg:rgb(155, 221, 231);
     --border-left: 6px solid rgb(11, 43, 117);
     --box-shadow: 5px 6px 3px #13293d;
-    --box-shadow2: 0px 0px 20px rgb(3, 69, 49);
+    --box-shadow2: 0px 0px 20px rgb(19, 203, 59);
+    --clean-font: 'Inter Tight', sans-serif;
+    --para: 1.3 rem;
     
     }
   
   /* Element Selectors */
   body {
     position: relative;
-    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-family: 'Roboto Slab', serif;;
     font-size: 20px;
     background-color: var(--accent-color);
     color: var( --alt-color)
@@ -69,13 +71,43 @@ h2{ flex-direction: row;
     padding: 0%;
     margin-right: 250%;
     /* border-right: #1a1b1b; */
-    text-decoration: none; 
+    /* text-decoration:wavy;  */
+    margin-left: 10px;
+    animation-name: nameload;
+    animation-duration: 2s;
+    animation-direction:unset;
+    animation-timing-function:ease-out;
 
 }
 h2:hover { text-decoration: underline; }
 img{
     padding: 0%;
     display:flex;
+}
+h3{ width:100%;
+    height: 0%;
+    flex-direction: row;
+    position:relative;
+    Display:inline-block;
+    text-align:center;
+    margin-top:20px;
+    margin-left: 70px;
+    text-rendering: auto;
+    font-family: 'Roboto Slab', serif;
+    color: var(--accent-color);
+}
+p{  position: absolute;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 30px;
+    word-wrap: break-word;
+    font-family: var(--clean-font);
+    text-decoration: none;
+    color: var(--bg-color);
+    font-size: var(--para);
+}
+#first, #second ,#third, #fourth, #fifth{
+    text-align: center;
 }
 header nav{
     background-color:var(--bg-color);
@@ -88,22 +120,20 @@ header nav{
   }
   #ContactMe li{
     display: inline;
-    text-align: center;
     justify-content: space-between;
     padding: 0px 50px; 
     text-decoration:underline;
-    background-color: var(--accent-color);
 
   }
   
-  a {
+   header a {
     /* text-decoration: none; */
     color: var(--text-color);
   }
   .container {
     position: relative;
     text-align: center;
-    color:var(--accent-color);
+     color:var(--accent-color); 
   }
   .bottom-right {
     position: absolute;
@@ -232,7 +262,7 @@ header nav{
     height: 150px;
     position: absolute;
      margin-top: 270px;
-     margin-left:94px;
+     margin-left:100px;
     background: var(--card-bg);
     top :0; left: 580px; right: 0; bottom: 0;
     box-shadow: var(--box-shadow);
@@ -282,7 +312,8 @@ header nav{
     height: 150px;
     position: absolute;
      /* margin-top: 270px; */
-     margin-left:94px; 
+     margin-left:100px; 
+     margin-right:0;
 
     background: var(--card-bg);
     top :450px; left: 580px; right: 0; bottom: 0;
@@ -352,7 +383,6 @@ header nav{
   
     main {
         max-width: 700px;
-      /* background-color: #2b2c2d; */
       flex-direction: column;
     }
     h2{ 
@@ -362,18 +392,15 @@ header nav{
         text-align:center;
         padding-bottom: 60px; 
         max-width:400px ;
-          margin-left:230px;  
-          white-space: normal;
-         /* margin-bottom:-90px; */
-         margin-right: 0%;
-        /* border-right: #1a1b1b; */
+        margin-left:230px;  
+        white-space: normal;
+        margin-right: 0%;
         text-decoration: underline; 
     
     }
 
     #aboutme{
         flex-direction: column;
-        /* max-width: 50%; */
          margin-top: -50px; 
          margin-left: 0px;
         white-space: normal;
@@ -388,33 +415,30 @@ header nav{
     }
     #first{
         flex-direction: column; 
-        /* margin-top: 20px; */
     }
     #second{
          flex-direction:column;
          position: relative;
-         /* bottom:150px; */
          top:100px; margin-left:0px;
         
     }
     #third{flex-direction:row-reverse;
       position:relative;
-    background-color: rgb(189, 189, 43); 
+    /* background-color: rgb(189, 189, 43);  */
      margin-top:-70px;margin-left:-300px;  }
     #fourth{flex-direction: column;
         position: relative;
-       /* bottom:150px; */
        top:10px;
        margin-left:0px;
-       background-color: orangered;}
+       /* background-color: orangered; */
+    } 
     #fifth{flex-direction: column;
-    background-color:coral;
+    /* background-color:coral; */
     /* left:0px; */
      position: relative;
       top:-160px;
       margin-left:-300px;}
     #ContactMe{flex-direction: column;
-        /* flex-direction: column; */
         max-width: 600px;
         margin-top: 0px;
         margin-left: 10px;
