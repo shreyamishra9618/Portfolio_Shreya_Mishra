@@ -5,10 +5,10 @@
   }
   :root {
     /* COLORS */
-    --bg-color: #1a1b1b;
+    --bg-color: #0b0221;
     --text-color:  rgb(102, 146, 146);;
     --alt-color: #4F4846;
-    --accent-color: #FDF8F5;
+    --accent-color: #110c23;
     --gradient: linear-gradient( rgb(140, 198, 248), rgb(48, 180, 195));
     --card-bg:rgb(155, 221, 231);
     --border-left: 6px solid rgb(11, 43, 117);
@@ -30,14 +30,28 @@
   main {
     padding: 60px 0;
   }
- header,
-footer {
-  height: 20px;
+ header {
+  height: 10px;
   width: 100%;
   line-height: 60px;
   display: inline;
   background-color: var( --bg-color);
 }
+footer {
+    /* Layout */
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    /* Deco */
+    background-color: var(--bg-color);
+    font-family: "lucida console";
+    color: var(--text-color);
+    /* Flex Settings */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 h1{
     width:300px;
     text-align: center;
@@ -109,6 +123,8 @@ header nav{
     
   }
   /* Every Box */
+  /* ************************************************************************** */
+  /* -------------About Me Section--------------------------------------------- */
   #aboutme{
     align-content: center;
     padding: 5px; 
@@ -144,26 +160,22 @@ header nav{
    }
 
    /* ************************************************************** */
-   /* Work Section Design */
+   /* ------------------Work Section Design------------------------- */
   #Work{
     display:flex;
     align-content: center;
     padding: 5px; 
     position: relative;
-    /* border-style: double; */
     height: 600px;
     width:90%;
     justify-content: space-between;
-    /* border-width: 2px; */
     margin-top: -90px;
     margin-left: 120px;
     margin-bottom:40px;
-    /* flex: 0 0 10px; */
     border-color: var(--text-color);
     border-left: var(--border-left);
     background-image: var(--gradient);
     box-shadow: var(--box-shadow);
-    /* background-image: linear-gradient( rgb(232, 224, 232), skyblue); */
   }
   #Work:hover{transform: translateY(-3%);
     box-shadow: var(--box-shadow2);}
@@ -172,7 +184,6 @@ header nav{
     width: 98%;
     height: 40%;
     position: absolute; margin-top: -5px;
-    /* margin-left:10px; */
     background: var(--card-bg);
      top :0; left: 10px; right: 10px; bottom: 0; 
      box-shadow: var(--box-shadow);
@@ -291,6 +302,9 @@ header nav{
    }
    #fifth:hover{ transform: translateY(-3%);
     box-shadow: var(--box-shadow2);}
+
+    /* *************************************************************** */
+    /* ------------------Contact me Section-------------------------- */
   #ContactMe{
     align-content: center;
     padding: 5px; 
