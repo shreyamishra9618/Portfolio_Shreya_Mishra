@@ -3,14 +3,28 @@
     margin:0;
     padding:0;  
   }
+  :root {
+    /* COLORS */
+    --bg-color: #1a1b1b;
+    --text-color:  rgb(102, 146, 146);;
+    --alt-color: #4F4846;
+    --accent-color: #FDF8F5;
+    --gradient: linear-gradient( rgb(140, 198, 248), rgb(48, 180, 195));
+    --card-bg:rgb(155, 221, 231);
+    --border-left: 6px solid rgb(11, 43, 117);
+    --box-shadow: 5px 6px 3px #13293d;
+    --box-shadow2: 0px 0px 20px rgb(3, 69, 49);
+    
+    }
   
   /* Element Selectors */
   body {
     position: relative;
     font-family: "Goudy Bookletter 1911", sans-serif;
     font-size: 20px;
-    background-color: #FDF8F5;
-    color: #4F4846;
+    background-color: var(--accent-color);
+    color: var( --alt-color)
+    /* display:inline-flex; */
   }
   
   main {
@@ -22,15 +36,19 @@ footer {
   width: 100%;
   line-height: 60px;
   display: inline;
-  background-color: #1a1b1b;
+  background-color: var( --bg-color);
 }
 h1{
     width:300px;
     text-align: center;
-    /* padding-inline: 10px; */
-    background-color: rgb(102, 146, 146);
+    background-color:var( --text-color);
     padding: 0%;
+    animation-name: nameload;
+    animation-duration: 2s;
+    animation-direction:unset;
+    animation-timing-function:ease-out;
 }
+
 h2{ flex-direction: row;
     Display: block;
     text-align: left;
@@ -46,7 +64,7 @@ img{
     display:flex;
 }
 header nav{
-    background-color: #2b2c2d;
+    background-color:var(--bg-color);
 }
  header li {
     display: inline;
@@ -60,26 +78,31 @@ header nav{
     justify-content: space-between;
     padding: 0px 50px; 
     text-decoration:underline;
-    background-color: rgb(217, 236, 236);
+    background-color: var(--accent-color);
 
   }
   
   a {
     /* text-decoration: none; */
-    color: rgb(102, 146, 146);
+    color: var(--text-color);
   }
   .container {
     position: relative;
     text-align: center;
-    color: white;
+    color:var(--accent-color);
   }
   .bottom-right {
     position: absolute;
     bottom: 8px;
     right: 16px;
     width:200px;
-    background-color: rgb(102, 146, 146);
+    background-color: var(--text-color);
+    animation-name: nameload;
+    animation-duration: 2s;
+    animation-direction:unset;
+    animation-timing-function:ease-out;
   }
+
   
 .text-right{
     text-align:right;
@@ -91,102 +114,222 @@ header nav{
     padding: 5px; 
     border-style:outset; 
     height: 250px;
-    width:1200px;
+    width:90%;
     justify-content: space-between;
     border-width: 2px;
-    border-color: rgb(102, 146, 146);
+    border-color: var(--text-color);
     margin-top: -90px;
     margin-left: 120px;
     margin-bottom:70px;
     flex: 0 0 10px;
-    border-left: 6px solid green;
-    background-image: linear-gradient( rgb(232, 224, 232), skyblue);
+    border-left: var(--border-left);
+    background-image: var(--gradient);
+    box-shadow: var(--box-shadow);
+     /* Transitions for hover movement effects */
+     transition-timing-function: ease-out;
+     transition-timing-function: ease-in;
+     transition-property: transform;
+     transition-duration: .2s;
+ 
+     /* Transitions for hover box shadow effects */
+     transition-property: box-shadow, transform;
+     transition-duration: .2s;
+     transition-timing-function: ease-out;
+     transition-timing-function: ease-in;
     /* background-color: aqua; */
   }
-  #aboutme:hover{box-shadow: 5px 6px 3px #13293d;}
+  #aboutme:hover{
+    transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);
+   }
+
+   /* ************************************************************** */
+   /* Work Section Design */
   #Work{
+    display:flex;
     align-content: center;
     padding: 5px; 
     position: relative;
     /* border-style: double; */
     height: 600px;
-    width:1200px;
+    width:90%;
     justify-content: space-between;
     /* border-width: 2px; */
     margin-top: -90px;
     margin-left: 120px;
     margin-bottom:40px;
     /* flex: 0 0 10px; */
-    border-color: rgb(102, 146, 146);
-    border-left: 6px solid green;
+    border-color: var(--text-color);
+    border-left: var(--border-left);
+    background-image: var(--gradient);
+    box-shadow: var(--box-shadow);
     /* background-image: linear-gradient( rgb(232, 224, 232), skyblue); */
   }
-  #Work:hover{box-shadow: 5px 6px 3px #13293d;}
+  #Work:hover{transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);}
   #Work #first {
+    display:flex;
     width: 98%;
     height: 40%;
     position: absolute; margin-top: -5px;
-    margin-left:10px;
-    background: rgb(180, 248, 180);
-    /* top :0; left: 0; right: 0; bottom: 0; */
+    /* margin-left:10px; */
+    background: var(--card-bg);
+     top :0; left: 10px; right: 10px; bottom: 0; 
+     box-shadow: var(--box-shadow);
+       /* Transitions for hover movement effects */
+       transition-timing-function: ease-out;
+       transition-timing-function: ease-in;
+       transition-property: transform;
+       transition-duration: .2s;
+       /* Transitions for hover box shadow effects */
+       transition-property: box-shadow, transform;
+       transition-duration: .2s;
+       transition-timing-function: ease-out;
+       transition-timing-function: ease-in;
    }
-    #second{
-    width: 560px;
+   #first:hover{
+    transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);}
+ #second{
+    display:flex;
+    width: 46%;
     height: 150px;
     position: absolute;
      margin-top: 270px;
-    margin-left:30px;
-    background: rgb(155, 221, 231);
-    top :0; left: 0; right: 0; bottom: 0;
+    margin-left:40px;
+    background:var(--card-bg);
+    top :0; left: 0; right: 30px; bottom: 0;
+    box-shadow: var(--box-shadow);
+      /* Transitions for hover movement effects */
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
+      transition-property: transform;
+      transition-duration: .2s;
+  
+      /* Transitions for hover box shadow effects */
+      transition-property: box-shadow, transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
 
    }
-   #third{
-    width: 560px;
+   #second:hover{ transform: translateY(-3%);
+    box-shadow:var(--box-shadow2);}
+ #third{
+    display:flex;
+    width: 46%;
     height: 150px;
     position: absolute;
      margin-top: 270px;
-     margin-left:30px;
-    background: rgb(155, 221, 231);
+     margin-left:94px;
+    background: var(--card-bg);
     top :0; left: 580px; right: 0; bottom: 0;
+    box-shadow: var(--box-shadow);
+      /* Transitions for hover movement effects */
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
+      transition-property: transform;
+      transition-duration: .2s;
+  
+      /* Transitions for hover box shadow effects */
+      transition-property: box-shadow, transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
 
    }
-   #fourth{
-    width: 560px;
+   #third:hover{ transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);}
+ #fourth{
+    display:flex;
+    width: 46%;
     height: 150px;
     position: absolute;
      /* margin-top: 270px; */
-    margin-left:30px;
-    background: rgb(155, 221, 231);
-    top :450px; left: 0; right: 0; bottom: 0;
+    margin-left:40px;
+    background:var(--card-bg);
+    top :450px; left: 0; right: 30px; bottom: 0;
+    box-shadow: var(--box-shadow);
+      /* Transitions for hover movement effects */
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
+      transition-property: transform;
+      transition-duration: .2s;
+  
+      /* Transitions for hover box shadow effects */
+      transition-property: box-shadow, transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
 
    }
+   #fourth:hover{ transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);}
    #fifth{
-    width: 560px;
+    display:flex;
+    width: 46%;
     height: 150px;
     position: absolute;
      /* margin-top: 270px; */
-     margin-left:30px; 
-    background: rgb(155, 221, 231);
+     margin-left:94px; 
+
+    background: var(--card-bg);
     top :450px; left: 580px; right: 0; bottom: 0;
+    box-shadow: var(--box-shadow);
+      /* Transitions for hover movement effects */
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
+      transition-property: transform;
+      transition-duration: .2s;
+  
+      /* Transitions for hover box shadow effects */
+      transition-property: box-shadow, transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
 
    }
+   #fifth:hover{ transform: translateY(-3%);
+    box-shadow: var(--box-shadow2);}
   #ContactMe{
     align-content: center;
     padding: 5px; 
     border-style: double;
     height: 90px;
-    width:1200px;
+    width:90%;
     justify-content: space-between;
     border-width: 2px;
     margin-top: -90px;
     margin-left: 120px;
     margin-bottom:30px;
-    border-color: rgb(102, 146, 146);
+    border-color: var(--text-color);
     flex: 0 0 10px;
-    border-left: 6px solid green;
-    background-image: linear-gradient( rgb(232, 224, 232), skyblue);
+    border-left: var(--border-left);
+    background-image: var(--gradient);
   }
-  #ContactMe:hover{box-shadow: 5px 6px 3px #13293d;}
+  #ContactMe:hover{box-shadow: var(--box-shadow);}
+
+/* ************************************************************** */
+
+  /* Animation Key frames */
+  @keyframes nameload {
+    0% {
+        transform: translateY(-110%);
+        opacity: 0%;
+      }
+
+    35% {
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 100%;
+      }
+}
+
+/* ************************************************************** */
+  /* Media Screen Designing */
 
   @media screen and (max-width: 768px) {
     header {
@@ -216,45 +359,48 @@ header nav{
 
     #aboutme{
         flex-direction: column;
-        max-width: 600px;
-        margin-top: -50px;
-        margin-left: 10px;
+        /* max-width: 50%; */
+         margin-top: -50px; 
+         margin-left: 0px;
         white-space: normal;
 
     }
     #Work{
         flex-direction: column;
-        height:860px;
-        max-width: 600px;
-        margin-top: -50px;
-        margin-left: 10px;
+         height:860px; 
+         margin-top: -50px; 
+         margin-left: 10px; 
         white-space: normal;
     }
     #first{
-        flex-direction: column;
-        max-width: 600px;
-
+        flex-direction: column; 
+        /* margin-top: 20px; */
     }
     #second{
-        flex-direction: column;
+         flex-direction:column;
+         position: relative;
+         /* bottom:150px; */
+         top:100px; margin-left:0px;
         
     }
-    #third{flex-direction: column;
+    #third{flex-direction:row-reverse;
       position:relative;
     background-color: rgb(189, 189, 43); 
-     top:150px;left:0px;  }
+     margin-top:-70px;margin-left:-300px;  }
     #fourth{flex-direction: column;
         position: relative;
        /* bottom:150px; */
-       top:160px;
+       top:10px;
+       margin-left:0px;
        background-color: orangered;}
     #fifth{flex-direction: column;
     background-color:coral;
-    left:0px;
+    /* left:0px; */
      position: relative;
-      top:170px;}
+      top:-160px;
+      margin-left:-300px;}
     #ContactMe{flex-direction: column;
-        flex-direction: column;
+        /* flex-direction: column; */
         max-width: 600px;
         margin-top: 0px;
         margin-left: 10px;
