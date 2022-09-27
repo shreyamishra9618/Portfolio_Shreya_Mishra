@@ -14,6 +14,7 @@
     --border-left: 6px solid rgb(11, 43, 117);
     --box-shadow: 5px 6px 3px #13293d;
     --box-shadow2: 0px 0px 20px rgb(19, 203, 59);
+    /* Font Design */
     --clean-font: 'Inter Tight', sans-serif;
     --para: 1.3 rem;
     
@@ -70,8 +71,6 @@ h2{ flex-direction: row;
     text-align: left;
     padding: 0%;
     margin-right: 250%;
-    /* border-right: #1a1b1b; */
-    /* text-decoration:wavy;  */
     margin-left: 10px;
     animation-name: nameload;
     animation-duration: 2s;
@@ -118,6 +117,10 @@ header nav{
     text-decoration: none;
      
   }
+  header a {
+    /* text-decoration: none; */
+    color: var(--text-color);
+  }
   #ContactMe li{
     display: inline;
     justify-content: space-between;
@@ -126,10 +129,6 @@ header nav{
 
   }
   
-   header a {
-    /* text-decoration: none; */
-    color: var(--text-color);
-  }
   .container {
     position: relative;
     text-align: center;
@@ -373,6 +372,8 @@ header nav{
       }
 }
 
+
+
 /* ************************************************************** */
   /* Media Screen Designing */
 
@@ -380,9 +381,14 @@ header nav{
     header {
       flex-direction: column;
     }
+
+    p{
+        font-size: .8 rem;
+    }
+
   
     main {
-        max-width: 700px;
+        max-width: 800px;
       flex-direction: column;
     }
     h2{ 
@@ -422,7 +428,7 @@ header nav{
          top:100px; margin-left:0px;
         
     }
-    #third{flex-direction:row-reverse;
+    #third{flex-direction:column;
       position:relative;
     /* background-color: rgb(189, 189, 43);  */
      margin-top:-70px;margin-left:-300px;  }
@@ -445,4 +451,17 @@ header nav{
         white-space: normal;
 }
   }
- 
+  @media screen and (max-width: 576px) {
+    header {
+      flex-direction: column;
+    }
+   #work p{
+        font-size: .4 rem;
+    }
+  
+    main {
+      max-width: 600px;
+    }
+  }
+  
+  
