@@ -1,7 +1,7 @@
 # Portfolio_Shreya_Mishra
-This repository provides ditails of my work and education.
+This repository provides ditails of my work and education.<br />
 GIT HUB URL:https://github.com/shreyamishra9618/Portfolio_Shreya_Mishra
-Website URL:https://shreyamishra9618.github.io/Portfolio_Shreya_Mishra/
+### Website URL:https://shreyamishra9618.github.io/Portfolio_Shreya_Mishra/
 
 
 
