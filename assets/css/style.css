@@ -385,7 +385,7 @@ header nav{
 
 
 /* ************************************************************** */
-  /* Media Screen Designing */
+  /* Media Screen Designing * Adapted to fit on mobile screen */
 
   @media screen and (max-width: 768px) {
     header {
@@ -468,6 +468,16 @@ header nav{
     main {
       max-width: 600px;
     }
+    #third{flex-direction:column;
+        position:relative;
+      /* background-color: rgb(189, 189, 43);  */
+       margin-top:-70px;margin-left:-350px;  }
+       #fifth{flex-direction: column;
+        /* background-color:coral; */
+        /* left:0px; */
+         position: relative;
+          top:-160px;
+          margin-left:-350px;}
   }
   
   
