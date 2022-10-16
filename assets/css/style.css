@@ -84,13 +84,14 @@ img{
     display:flex;
 }
 h3{ width:100%;
+ 
     /* flex-direction: column; */
     position:relative;
     /* Display:inline-block; */
     text-align:center;
     margin-top:10px;
     font-family: 'Roboto Slab', serif;
-    color: var(--accent-color);
+    /* color: var(--accent-color); */
 }
 #contentImg img{
     position: relative;
@@ -102,13 +103,14 @@ h3{ width:100%;
     /* border-radius: 50%; */
 }
 p{  margin-top: 40px;
-    margin-left: 10px;
-    text-align: center; 
+    margin-left: 20px;
+    text-align: left; 
     word-wrap: break-word;
-    font-family: var(--clean-font);
+    /* font-family: var(--clean-font); */
+    font-size: 4rem;
     text-decoration: none;
     
-    color: var(--bg-color);
+    /* color: var(--bg-color); */
     font-size: var(--para);
 }
 #first, #second ,#third, #fourth, #fifth{
@@ -220,10 +222,13 @@ header nav{
     box-shadow: var(--box-shadow2);}
   #Work #first {
     display:flex;
+    
+    position: absolute; margin-top: -5px;
+    /* background: var(--card-bg); */
+   
     width: 98%;
     height: 40%;
-    position: absolute; margin-top: -5px;
-    background: var(--card-bg);
+    /* background-size: 150px; */
      top :0; left: 10px; right: 10px; bottom: 0; 
      box-shadow: var(--box-shadow);
        /* Transitions for hover movement effects */
@@ -237,6 +242,22 @@ header nav{
        transition-timing-function: ease-out;
        transition-timing-function: ease-in;
    }
+   .textData {
+    overflow: hidden;
+    background: linear-gradient(rgb(90, 177, 244), rgba(164, 207, 234, 0.5));
+    width: 100%;
+    color: rgb(44, 6, 79);
+    vertical-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+    #first {
+    background-image: url("../images/backgroundProject1.png");
+    top :0; left: 10px; right: 10px; bottom: 0; 
+    background-size: 1300px 250px;
+    border: 2px solid;
+     /* color: pink; */ 
+   
+   } 
    #first:hover{
     transform: translateY(-3%);
     box-shadow: var(--box-shadow2);}
