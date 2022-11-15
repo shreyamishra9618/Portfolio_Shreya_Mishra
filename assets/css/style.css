@@ -6,7 +6,7 @@
   :root {
     /* Color Scheme */
     --bg-color: #110c23;
-    --text-color:  rgb(102, 146, 146);;
+    --text-color:  rgb(102, 146, 146);
     --alt-color: #6c3c2f;
     --accent-color:#150441;
     --gradient: linear-gradient( rgb(140, 198, 248), rgb(48, 180, 195));
@@ -218,6 +218,14 @@ header nav{
     background-image: var(--gradient);
     box-shadow: var(--box-shadow);
   }
+  #Work h5:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding-right:50px;
+    color:black;
+    background-image: url(../images/white-arrow.png);
+    transition: padding-right 0.5s, background-image 1s;
+    
+}
   #Work:hover{transform: translateY(-3%);
     box-shadow: var(--box-shadow2);}
   #Work #first {
@@ -268,8 +276,12 @@ header nav{
     position: absolute;
      margin-top: 270px;
     margin-left:40px;
-    background:var(--card-bg);
-    top :0; left: 0; right: 30px; bottom: 0;
+    background-image: url("../images/starKids.png");
+    /* top :0; left: 10px; right: 10px; bottom: 0;  */
+    background-size: 570px 250px;
+    
+    
+    /* top :0; left: 0; right: 30px; bottom: 0; */
     box-shadow: var(--box-shadow);
       /* Transitions for hover movement effects */
       transition-timing-function: ease-out;
