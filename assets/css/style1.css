@@ -1,0 +1,414 @@
+:root {
+    /* colors */
+    --primary-light: #a1e7e4;
+    --primary-dark: #6ac3bd;
+    --background: #150441;
+    --fontcolor: #2d6c68;
+    /* height for small Work img */
+    --work-height: 140px;
+    /* values for main structure  :for <header> & <main>  */
+    --main-structure-w: 80wh;
+    --max-width: 90%;
+
+    --dashed_width: 2px;
+    --gradient: linear-gradient(rgb(140, 198, 248), rgb(48, 180, 195));
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    width: 100%;
+    background-color: #150441;
+    margin: 0 auto;
+}
+
+header .hd_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: var(--mainStructureW);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header li {
+    display: inline;
+}
+
+header nav a {
+    font-size: 1.2em;
+    padding: 0 10px;
+    color: var(--fontcolor);
+    font-weight: bold;
+}
+
+h1 {
+    position: relative;
+    font-size: 2.7em;
+    color: var(--fontcolor);
+    background-color: rgb(102, 187, 221);
+    border: var(--dashed_width) dashed var(--primary-light);
+    border-radius: 10px;
+    padding: 15px 100px 15px 30px;
+}
+
+
+header img.myphoto {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    position: absolute;
+    top: -4px;
+    right: -60px;
+    border: 3px solid var(--primary-light);
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+/* my profile photo comes in as the page loads */
+@keyframes slidein {
+    from {
+        right: 100px;
+        opacity: 0;
+    }
+
+    to {
+        right: -60px;
+        opacity: 1;
+    }
+}
+
+.intro {
+    height: 60px;
+    width: 90%;
+    margin-left: 70px;
+    background-image: url("../images/headerFooter.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.intro article {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    position: relative;
+    font-family: 'Caveat', cursive;
+}
+
+.intro h2 {
+
+    font-size: 2.6em;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    transform: rotate(-5deg);
+    color: #fff;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.intro p {
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    font-size: 1.6em;
+    color: #f0bfbf;
+    animation-name: nameload;
+    animation-duration: 2s;
+    animation-direction: unset;
+    animation-timing-function: ease-out;
+}
+
+.intro h2 strong {
+    font-size: 1.7em;
+}
+
+.intro h2 span {
+    color: var(--primary-light);
+    text-shadow: 4px 4px var(--fontcolor);
+}
+
+main {
+    width: var(--main-structure-w);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background-color: rgb(140, 228, 246);
+    padding: 30px 0 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-image: var(--gradient);
+}
+
+main section {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+/* Headers in ain */
+main h3 {
+    width: 20%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.8em;
+
+    color: var(--fontcolor);
+    padding: 5px 10px 5px 30px;
+    border: var(--dashed_width) dashed var(--primary-light);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+
+    /* To have tight borders aound each section's header */
+    align-self: flex-start;
+    animation-name: nameload;
+    animation-duration: 2s;
+    animation-direction: unset;
+    animation-timing-function: ease-out;
+}
+
+main .rightbox {
+    width: 75%;
+    border-left: 2px solid var(--primary-light);
+    padding: 10px 20px;
+
+}
+
+#AboutMe p {
+    line-height: 160%;
+}
+
+#Work ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Work li {
+    width: 49%;
+    margin-bottom: 12px;
+    position: relative;
+    border: 2px solid var(--primary-dark);
+    border-radius: 10px;
+    background-color: rgb(140, 228, 246);
+}
+
+#Work h5 {
+    position: absolute;
+    bottom: 10px;
+    left: -6px;
+    color: var(--fontcolor);
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 0 10px 10px 0;
+
+    background-image: none;
+    background-position: 96% 7px;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-color: var(--primary-light);
+
+    /* noticed absolute positioned header disapear(goes behind the image) when the filter property applied to image */
+    z-index: 2;
+}
+
+#Work small {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.93m;
+    font-weight: normal;
+}
+
+#Work li img {
+    width: 100%;
+    height: var(--work-height);
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8) contrast(0.7);
+    border-radius: 8px;
+}
+
+#Work li:hover {
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
+
+#Work li:hover img {
+    filter: none;
+    transition: filter 0.5s;
+}
+
+#Work li:hover h5 {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding-right: 50px;
+    color: black;
+    /* background-image: url(); */
+    transition: padding-right 0.5s, background-image 1s;
+
+}
+
+/* first Work image larger for L/M screen */
+#Work li.first {
+    width: 100%;
+}
+
+#Work li.first img {
+    height: 400px;
+}
+
+
+
+#ContactMe ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 0;
+}
+
+#ContactMe li,
+#ContactMe li a {
+    color: var(--fontcolor);
+    font-weight: bold;
+    font-size: 1.06em;
+
+}
+
+footer {
+    /* background-color: var(--primary-light); */
+    text-align: center;
+    padding: 15px 0;
+    color: var(--fontcolor);
+    font-size: 0.8em;
+    height: 40px;
+    width: 90%;
+    margin-left: 70px;
+    background-image: url("../images/Screen\ Shot\ 2022-09-24\ at\ 1.21.40\ PM.png");
+    background-size: cover;
+    background-position: center;
+    color: #f0bfbf;
+}
+
+/* ************************************************************** */
+
+/* Animation Key frames */
+@keyframes nameload {
+    0% {
+        transform: translateY(-110%);
+        opacity: 0%;
+    }
+
+    35% {
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+
+
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    /* uses default style */
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+
+    /* nav links go down from top header */
+    header .hd_top {
+        display: block;
+    }
+
+    header h1 {
+        text-align: center;
+        padding-right: 30px;
+        margin-bottom: 10px;
+        font-size: 3em;
+        background-image: none;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header img.myphoto {
+        width: 100px;
+        height: 100px;
+        top: -5px;
+        right: 0px;
+        animation: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    /* each main header <h3> goes to the top of contents */
+    main section {
+        flex-direction: column;
+
+    }
+
+    main h3 {
+        width: auto;
+        border-bottom: none;
+        border-right: var(--dashed_width) dashed var(--primary-light);
+        border-radius: 20px 20px 0 0;
+        padding-right: 30px;
+    }
+
+    main .rightbox {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        /* border change in between <h3> and .rightbox */
+        border-top: 2px solid var(--primary-light);
+        border-left: none;
+    }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+
+    /* subtitle inside top image goes in the center */
+    header img.myphoto {
+        width: 90px;
+        height: 90px;
+    }
+
+    .myphotobg {
+        justify-content: center;
+    }
+
+    #Work li {
+        width: 100%;
+        /* margin-bottom:8px; */
+    }
+
+    /* the first work image size become same as the rest */
+    #Work li.first img {
+        height: var(--work-height);
+    }
+
+    #ContactMe ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #ContactMe li {
+        padding: 8px 0 8px 32px;
+    }
+
+
+}
