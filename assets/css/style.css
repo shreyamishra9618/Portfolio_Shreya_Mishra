@@ -9,6 +9,7 @@
     /* values for main structure  :for <header> & <main>  */
     --main-structure-w: 80wh;
     --max-width: 90%;
+    --box-shadow2: 0px 0px 20px rgb(22, 69, 32);
 
     --dashed_width: 2px;
     --gradient: linear-gradient(rgb(140, 198, 248), rgb(48, 180, 195));
@@ -87,7 +88,7 @@ header img.myphoto {
 }
 
 .intro {
-    height: 60px;
+    height: 80px;
     width: 90%;
     margin-left: 70px;
     background-image: url("../images/headerFooter.png");
@@ -229,8 +230,10 @@ main .rightbox {
     height: var(--work-height);
     object-fit: cover;
     display: block;
-    filter: brightness(0.8) contrast(0.7);
+    /* filter: brightness(0.4) contrast(1); */
     border-radius: 8px;
+    box-shadow: var(--box-shadow2)
+
 }
 
 #Work li:hover {
@@ -289,7 +292,7 @@ footer {
     height: 40px;
     width: 90%;
     margin-left: 70px;
-    background-image: url("../images/Screen\ Shot\ 2022-09-24\ at\ 1.21.40\ PM.png");
+    background-image: url("../images/headerFooter.png");
     background-size: cover;
     background-position: center;
     color: #f0bfbf;
@@ -319,6 +322,28 @@ footer {
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
     /* uses default style */
+    .intro {
+        height: 60px;
+        width: 100%;
+        margin-left: 60px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+    }
+    footer {
+        /* background-color: var(--primary-light); */
+        text-align: center;
+        padding: 15px 0;
+        color: var(--fontcolor);
+        font-size: 0.8em;
+        height: 40px;
+        width: 100%;
+        margin-left: 60px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+       
+    }
 }
 
 /* Large smartphones - navbar changes color */
@@ -376,6 +401,28 @@ footer {
         border-top: 2px solid var(--primary-light);
         border-left: none;
     }
+    .intro {
+        height: 60px;
+        width: 100%;
+        margin-left: 30px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+    }
+    footer {
+        /* background-color: var(--primary-light); */
+        text-align: center;
+        padding: 15px 0;
+        color: var(--fontcolor);
+        font-size: 0.8em;
+        height: 40px;
+        width: 100%;
+        margin-left: 30px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+       
+    }
 }
 
 /* Small smartphones - image placeholders change color */
@@ -409,6 +456,29 @@ footer {
     #ContactMe li {
         padding: 8px 0 8px 32px;
     }
+    .intro {
+        height: 60px;
+        width: 100%;
+        margin-left: 0px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+    }
+    footer {
+        /* background-color: var(--primary-light); */
+        text-align: center;
+        padding: 15px 0;
+        color: var(--fontcolor);
+        font-size: 0.8em;
+        height: 40px;
+        width: 100%;
+        margin-left: 0px;
+        background-image: url("../images/headerFooter.png");
+        background-size: cover;
+        background-position: center;
+       
+    }
+    
 
 
 }
